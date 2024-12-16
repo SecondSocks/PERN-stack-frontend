@@ -1,0 +1,41 @@
+.wrapper {
+	@apply w-screen min-h-screen relative;
+
+	> form {
+		@apply w-max p-5 absolute left-5 top-5 bg-black/45 rounded-xl;
+		animation: slideIn 1s ease;
+
+		> h1 {
+			@apply text-2xl;
+		}
+
+		> input {
+			@apply block py-1.5 px-3 mt-4 rounded-sm w-full border border-transparent bg-black/30 placeholder:text-white/70 outline-none;
+			transition: border-color .35s linear;
+
+			&:focus {
+				@apply border-[#ffb3c0];
+			}
+		}
+
+		> button {
+			@apply mt-4 inline-block text-lg font-medium uppercase py-1 px-4 border bg-transparent;
+			transition: background-color .35s linear;
+
+			&:hover {
+				@apply bg-white/15;
+			}
+		}
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-110%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}

@@ -1,0 +1,13 @@
+.success {
+	@apply text-4xl m-10 text-green-400 font-medium;
+	animation: fade .4s ease;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
